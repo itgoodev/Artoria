@@ -122,12 +122,12 @@ if SPAMWATCH is None:
 else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
-try:
-    REDIS.ping()
-    LOGGER.info("Your redis server is now alive!")
-except BaseException:
-    raise Exception("Your redis server is not alive, please check again.")
+# REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+# try:
+#     REDIS.ping()
+#     LOGGER.info("Your redis server is now alive!")
+# except BaseException:
+#     raise Exception("Your redis server is not alive, please check again.")
 
 api_id = API_ID
 api_hash = API_HASH
